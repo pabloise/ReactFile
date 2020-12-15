@@ -9,6 +9,13 @@ class Main extends Component {
     list: technicians
   }
 
+  delete = (id) => {
+    const deleteTechnician = this.state.list.filter((technician) => technician.id !== id )
+    this.setState({
+      list: deleteTechnician
+    })
+  }
+
   addTechnician = (newTechnician) => {
     this.setState({
       list: [...this.state.list, newTechnician]
@@ -41,6 +48,14 @@ class Main extends Component {
                   <td> { itemTechnicians.phone } </td>
                   <td> { itemTechnicians.email } </td>
                   <td> { itemTechnicians.boiler_types } </td>
+                  <td>
+                    <button>
+                      Update
+                    </button>
+                    <button onClick = {() => this.delete(itemTechnicians.id)} >
+                      Delete
+                    </button>
+                  </td>
                 </tr>
               )
             }) }
