@@ -1,3 +1,14 @@
+.MainContainer {
+  margin-top: 200px;
+}
+
 table {
   width: 100%;
+}
+
+.nameOfItem {
+  color: #fc6225;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 50px;
 }

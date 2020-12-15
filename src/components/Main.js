@@ -10,10 +10,9 @@ class Main extends Component {
     editItem: undefined
   }
 
-  delete = (id) => {
-    const deleteTechnician = this.state.list.filter((technician) => technician.id !== id )
+  addTechnician = (newTechnician) => {
     this.setState({
-      list: deleteTechnician
+      list: [...this.state.list, newTechnician]
     })
   }
 
@@ -23,9 +22,10 @@ class Main extends Component {
     })
   }
 
-  addTechnician = (newTechnician) => {
+  delete = (id) => {
+    const deleteTechnician = this.state.list.filter((technician) => technician.id !== id )
     this.setState({
-      list: [...this.state.list, newTechnician]
+      list: deleteTechnician
     })
   }
 
@@ -51,10 +51,10 @@ class Main extends Component {
   render() {
     console.log(this.state)
     return (
-      <div>
+      <div className="MainContainer">
         <table>
           <thead>
-            <tr>
+            <tr className="nameOfItem">
               <th>First name</th>
               <th>Last name</th>
               <th>Address</th>
