@@ -28,12 +28,12 @@ export class Form extends Component {
     console.log(this.props)
     return (
       <tr>
-        <td> { <input type="text" name="first_name" onChange={this.inputChange} value={this.state.first_name}></input> } </td>
-        <td> { <input type="text" name="last_name" onChange={this.inputChange} value={this.state.last_name}></input> } </td>
-        <td> { <input type="text" name="address" onChange={this.inputChange} value={this.state.address}></input> } </td>
-        <td> { <input type="text" name="phone" onChange={this.inputChange} value={this.state.phone}></input> } </td>
-        <td> { <input type="text" name="email" onChange={this.inputChange} value={this.state.email}></input> } </td>
-        <td> { <input type="text" name="boiler_types" onChange={this.inputChange} value={this.state.boiler_types}></input> } </td>
+        <td> { <input type="text" name="first_name" onChange={this.inputChange} value={this.state.first_name} /> } </td>
+        <td> { <input type="text" name="last_name" onChange={this.inputChange} value={this.state.last_name} /> } </td>
+        <td> { <input type="text" name="address" onChange={this.inputChange} value={this.state.address} /> } </td>
+        <td> { <input type="text" name="phone" onChange={this.inputChange} value={this.state.phone} /> } </td>
+        <td> { <input type="text" name="email" onChange={this.inputChange} value={this.state.email} /> } </td>
+        <td> { <input type="text" name="boiler_types" onChange={this.inputChange} value={this.state.boiler_types} /> } </td>
         <td>
           <button onClick={this.submit}>
             Add
